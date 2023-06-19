@@ -1,0 +1,17 @@
+import react,{useState} from 'react'
+import {View,Text,Button} from 'react-native'
+
+let count=0;
+export default function App()
+{
+  let [num,setNum]=useState(0)
+  return(
+  <View style={{backgroundColor:'yellow',justifyContent:'center',alignItems:'center',flex:1}}>
+    <Text style={{justifyContent:'center',alignItems:'center',flex:0}}>{num}</Text>
+    <Button
+    title='ADD' onPress={()=>{setNum(++num , count++ ) }} >
+    </Button>
+    <Text> you clicked button {count} times</Text>
+  </View>
+  )
+}
